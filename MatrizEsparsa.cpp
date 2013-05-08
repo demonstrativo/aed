@@ -6,6 +6,9 @@
 #include <string.h>
 #include <ctype.h>
 
+
+// REPRESENTAÇÃO POR LINHAS
+
 typedef struct s{
 	int info;
 	int lin;
@@ -194,7 +197,7 @@ void excluirLinhaI(MATRIZ *m, int i) {
 	}
 }
 
-// LISTAS CRUZADAS
+// REPRESENTAÇÃO POR LISTAS CRUZADAS
 
 typedef struct s {
 	int info;
@@ -208,7 +211,7 @@ typedef struct s {
 typedef struct {
 	NO * lin[MAXLIN+1];
 	NO * col[MAXCOL+1];
-}
+}MATRIZ;
 
 void inicializar(MATRIZ *m) {
 	int i;

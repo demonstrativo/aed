@@ -1,0 +1,17 @@
+1)dada uma matriz esparsa, excluir uma linha inteira
+
+2a)transformar uma pilha dinâmica em uma fila.
+b)dada uma fila, converter em pilha;
+
+3)inserir todas chaves de uma lista generalizada no inicio2 de um deque vazio
+
+//4) Verificar se as chaves de uma lista generalizada correspondem exatamente às chave e,
+//a)Uma estrutura de NP pilhas em um vetor
+//b)Lista cruzada
+
+/5)Criar um algoritmo FuraFila para fila dinâmica
+//a)Fácil - criando um novo elemento
+//b)Movendo o elemento P.
+
+//6)Encontrar a linha com maior numero de elementos em uma matriz esparsa
+

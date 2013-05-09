@@ -207,6 +207,8 @@ typedef struct s {
 	*s proxL;
 }NO;
 
+#define MAXLIN 3
+#define MAXCOL 3
 
 typedef struct {
 	NO * lin[MAXLIN+1];
@@ -310,8 +312,3 @@ void inserir(MATRIZ *m, int x, int i, int j) {
 	// falta atualizar colunas
 
 }
-
-// EXERCICIOS
-// 1 - Exibir os valores ao redor de x
-// 2 - Atribuir valor 1 a estes pontos
-// 3 - Descobrir qual a maior distância entre 2 pontos em uma mesma linha retornando os 2 pontos

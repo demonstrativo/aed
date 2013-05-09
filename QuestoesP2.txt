@@ -9,7 +9,7 @@ b)dada uma fila, converter em pilha;
 //a)Uma estrutura de NP pilhas em um vetor
 //b)Lista cruzada
 
-/5)Criar um algoritmo FuraFila para fila dinâmica
+/5)Criar um algoritmo FuraFila para fila dinâmica DE BOA
 //a)Fácil - criando um novo elemento
 //b)Movendo o elemento P.
 

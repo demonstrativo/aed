@@ -29,6 +29,7 @@ typedef struct estrutura
 {
 	TIPOCHAVE chave;
 	estrutura *prox;
+	estrutura *ant;
 } NO;
 
 typedef struct 
@@ -57,18 +58,6 @@ TIPOCHAVE sairInicio1 (DEQUE *d) {
 	return resp;
 }
 
-void entrarInicio1(DEQUE *d, TIPOCHAVE ch) {
-	NO *novo =(NO*) malloc(sizeof(NO));
-	novo->chave = ch;
-	novo->ant = NULL;
-	novo->prox = d->inicio1;
-	if(!d->inicio1)
-		d->inicio2 = novo;
-	else
-		d->inicio1->ant = novo;
-	d->inicio1 = novo;
-}
-
 TIPOCHAVE sairInicio2 (DEQUE *d) {
 	TIPOCHAVE resp = -1;
 	if(!d->inicio1)
@@ -84,6 +73,17 @@ TIPOCHAVE sairInicio2 (DEQUE *d) {
 	return resp;
 }
 
+void entrarInicio1(DEQUE *d, TIPOCHAVE ch) {
+	NO* novo = (NO*) malloc(sizeof(NO)); 
+	novo->chave = ch; 
+	novo->ant = NULL; 
+	novo->prox = d->inicio1; 
+	if(d->inicio1) d->inicio1->ant = novo;  // já contém dados 
+	else d->inicio2 = novo;     // 1a. inserção 
+	d->inicio1 = novo; 
+}
+
+
 void entrarInicio2(DEQUE *d, TIPOCHAVE ch) {
 	NO *novo =(NO*) malloc(sizeof(NO));
 	novo->chave = ch;
@@ -96,8 +96,17 @@ void entrarInicio2(DEQUE *d, TIPOCHAVE ch) {
 	d->inicio2 = novo;
 }
 
+
 void destruirDeque(DEQUE *d) {
 	while(d->inicio1) {
 		sairInicio1(d);
 	}
+}
+
+void imprimeDeque(DEQUE *d) {
+     NO* p = d->inicio1;
+     while(p) {
+		printf("%d\n",p->chave);
+		p = p->prox;
+     }
 }
